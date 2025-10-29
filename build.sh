@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2025, Advanced Micro Devices, Inc.
@@ -9,20 +9,14 @@ source_path=$(cd "$(dirname -- "$0")"; pwd)
 qemu_dir="$source_path/qemu"
 virgl_dir="$source_path/virglrenderer"
 
-cd $virgl_dir
-meson setup -D drm-renderers=amdxdna --prefix $source_path/build build
-cd build
-ninja install
+$(source_path)/build-virglrenderer.sh
+if [ $? -ne 0 ]; then
+    echo "Failed to build virglrenderer"
+    exit 255
+fi
 
-QEMU_CONF_OPTS=" \
-  --enable-drm-accel --enable-vhost-user --target-list=x86_64-softmmu \
-  --enable-opengl \
-  --enable-virglrenderer \
-  --enable-sdl \
-"
-
-pkgconf_dir=`find $source_path/build | grep pkgconfig$`
-cd $qemu_dir
-PKG_CONFIG_PATH=$pkgconf_dir			\
-./configure ${QEMU_CONFIG_OPTS}
-make
+$(source_path)/build-qemu.sh
+if [ $? -ne 0 ]; then
+    echo "Failed to build QEMU"
+    exit 255
+fi
