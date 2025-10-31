@@ -25,3 +25,6 @@
 	path = virglrenderer
 	url = ssh://gerrit-git.amd.com:29418/brahma/ec/virglrenderer
 	branch = amd-temp-vas-staging
+[submodule "wayland"]
+	path = wayland
+	url = https://gitlab.freedesktop.org/wayland/wayland.git

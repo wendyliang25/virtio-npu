@@ -1,0 +1,5 @@
+#meson > 0.63 : pip3 install --user --upgrade meson
+#ninja
+apt install libxkbcommon-dev
+apt install xsltproc
+apt update && apt install xmlto
