@@ -1,3 +1,27 @@
 [submodule "xdna-driver"]
 	path = xdna-driver
 	url = https://github.com/amd/xdna-driver.git
+[submodule "drm"]
+	path = drm
+	url = ssh://gerrit-git.amd.com:29418/brahma/ec/drm
+	branch = amd-temp-vas-staging
+[submodule "amd-SDL"]
+	path = amd-SDL
+	url = ssh://gerrit-git.amd.com:29418/amd/ec/amd-SDL
+	branch = amd-temp-ecarx-staging
+[submodule "wayland-protocols"]
+	path = wayland-protocols
+	url = ssh://gerrit-git.amd.com:29418/brahma/ec/wayland-protocols
+	branch = amd-temp-vas-staging
+[submodule "weston"]
+	path = weston
+	url = ssh://gerrit-git.amd.com:29418/brahma/ec/weston
+	branch = amd-temp-vas-staging
+[submodule "qemu"]
+	path = qemu
+	url = ssh://gerrit-git.amd.com:29418/brahma/ec/qemu-xen
+	branch = amd-temp-vas-staging
+[submodule "virglrenderer"]
+	path = virglrenderer
+	url = ssh://gerrit-git.amd.com:29418/brahma/ec/virglrenderer
+	branch = amd-temp-vas-staging

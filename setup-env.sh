@@ -1,0 +1,6 @@
+PATH_ROOT=/scratch1/wendy
+PREFIX_ROOT=${PATH_ROOT}/usr/local
+
+export PKG_CONFIG_PATH=${PREFIX_ROOT}/lib/pkgconfig:${PKT_CONFIG_PATH}
+export LD_LIBRARY_PATH=${PREFIX_ROOT}/lib:${LD_LIBRARY_PATH}
+export PATH=${PREFIX_ROOT}/bin:${PATH}
