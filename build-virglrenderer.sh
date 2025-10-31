@@ -43,7 +43,6 @@ set -x
 cd $virgl_dir
 meson ${MESON_CONFIG_CMD} build \
   --prefix $source_path/build \
-  -Ddrm-renderers=amdxdna \
   -Dplatforms=egl \
   -Dminigbm_allocation=false \
   -Dhsakmt-amdgpu-experimental=false \

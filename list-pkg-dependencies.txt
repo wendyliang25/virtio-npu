@@ -1,5 +1,14 @@
 #meson > 0.63 : pip3 install --user --upgrade meson
 #ninja
 apt install libxkbcommon-dev
+
+# build wayloand
 apt install xsltproc
 apt update && apt install xmlto
+
+# build weston
+apt install xserver-xorg-input-libinput libinput-dev
+apt update && apt install libwebp-dev
+apt update && apt-get install libpam0g-dev
+apt update && apt install libseat-dev
+apt update && apt install libgbm-dev

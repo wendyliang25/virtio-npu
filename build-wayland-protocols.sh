@@ -2,7 +2,7 @@
 
 set -x
 
-PREFIX=/scratch1/wendy/usr/local
+PREFIX=/usr/local
 SRC_DIR=wayland-protocols
 
 cd ${SRC_DIR}
