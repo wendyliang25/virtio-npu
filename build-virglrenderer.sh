@@ -45,6 +45,7 @@ meson ${MESON_CONFIG_CMD} build \
   --prefix $source_path/build \
   -Dplatforms=egl \
   -Dminigbm_allocation=false \
+  -Ddrm-amdgpu-experimental=true \
   -Dhsakmt-amdgpu-experimental=false \
 
 cd build
