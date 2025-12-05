@@ -2,7 +2,7 @@
 
 set -x
 
-PREFIX=/scratch1/wendy/usr/local
+PREFIX=/usr/local
 SRC_DIR=drm
 
 cd ${SRC_DIR}
