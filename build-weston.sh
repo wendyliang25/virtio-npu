@@ -15,6 +15,7 @@ meson setup build --prefix=${PREFIX} \
   -Dpipewire=false \
   -Dcolor-management-lcms=false \
   -Dbackend-drm-screencast-vaapi=false \
+  -Ddemo-clients=false \
 
 ninja -C build
 ninja -C build install
