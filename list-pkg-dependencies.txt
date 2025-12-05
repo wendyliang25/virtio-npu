@@ -3,12 +3,18 @@
 apt install libxkbcommon-dev
 
 # build wayloand
+apt install libxml2-dev
 apt install xsltproc
 apt update && apt install xmlto
 
 # build weston
+apt-get update && apt-get install libpixman-1-dev
 apt install xserver-xorg-input-libinput libinput-dev
 apt update && apt install libwebp-dev
+apt-get update && apt-get install libcairo2-dev
 apt update && apt-get install libpam0g-dev
 apt update && apt install libseat-dev
 apt update && apt install libgbm-dev
+
+# build virglrenderer
+apt-get update && apt-get install libepoxy-dev
