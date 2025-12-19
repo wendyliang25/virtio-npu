@@ -18,3 +18,8 @@ apt update && apt install libgbm-dev
 
 # build virglrenderer
 apt-get update && apt-get install libepoxy-dev
+
+# build xen
+apt-get install iasl
+apt-get install yajl
+apt-get update && apt-get install libyajl-dev
